@@ -1,0 +1,32 @@
+{
+  "name": "kntro-design",
+  "version": "1.0.0",
+  "description": "kntro design sites",
+  "main": "index.js",
+  "scripts": {
+    "new-project": "node index.js new-project",
+    "dev": "webpack"
+  },
+  "author": "PerfectELK",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.11.6",
+    "@babel/preset-env": "7.11.5",
+    "babel-loader": "8.1.0",
+    "css-loader": "4.3.0",
+    "eslint": "7.10.0",
+    "html-webpack-plugin": "4.5.0",
+    "mini-css-extract-plugin": "0.12.0",
+    "optimize-css-assets-webpack-plugin": "5.0.4",
+    "pug": "3.0.0",
+    "pug-loader": "2.4.0",
+    "sass": "1.26.12",
+    "sass-loader": "10.0.2",
+    "style-loader": "1.3.0",
+    "terser-webpack-plugin": "4.2.3",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12",
+    "webpack-livereload-plugin": "2.3.0",
+    "webpack-stream": "6.1.0"
+  }
+}
