@@ -26,6 +26,14 @@ module.exports = {
 		path: path.resolve(__dirname, 'projects', project, 'dist'),
 		filename: 'js/bundle.min.js',
 	},
+	devServer: {
+		historyApiFallback: true,
+        contentBase: path.resolve(__dirname, 'projects', project, 'dist'),
+        open: true,
+        compress: true,
+        hot: true,
+        port: 8080,
+	},
 	module: {
 		rules: [
 			{
@@ -57,9 +65,9 @@ module.exports = {
 		minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
 	},
 	plugins: [
-		new LiveReloadPlugin({
-			hostname: 'localhost',
-		}),
+		// new LiveReloadPlugin({
+		// 	hostname: 'localhost',
+		// }),
 		new MiniCssExtractPlugin({
 			filename: 'css/style.css',
 		}),
