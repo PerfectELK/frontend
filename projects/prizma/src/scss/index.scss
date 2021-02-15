@@ -1,5 +1,5 @@
+@import './partials/null-css.scss';
+@import './vars/index.scss';
 @import './pages/index.scss';
 
-body {
-	background-color: #000;
-}
+@import './partials/header.scss';

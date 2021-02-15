@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "new-project": "node index.js new-project",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "build": "webpack --mode=production"
   },
   "author": "PerfectELK",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "babel-loader": "8.1.0",
     "css-loader": "4.3.0",
     "eslint": "7.10.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "4.5.0",
     "mini-css-extract-plugin": "0.12.0",
     "optimize-css-assets-webpack-plugin": "5.0.4",
