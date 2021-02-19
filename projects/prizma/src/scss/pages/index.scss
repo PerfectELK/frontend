@@ -11,6 +11,7 @@ main.main-block {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            position: relative;
             z-index: 100;
 
             .bg-layer {
@@ -25,8 +26,10 @@ main.main-block {
 
             .top-block {
                 z-index: 101;
-                height: 200px;
                 margin: 0 150px 0 150px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
 
                 .left {
                     .description {
@@ -39,10 +42,135 @@ main.main-block {
                         }
 
                         .company-desc {
+                            margin-top: 15px;
                             font-family: $main_font_family;
                             color: $white;
+                            max-width: 600px;
                             font-size: 36px;
+                            line-height: 36px;
                         }  
+                    }
+
+                    .get-service-btn {
+                        margin-top: 40px;
+
+                        button {
+                            background-color: $red;
+                            border: none;       
+                            padding: 15px 38px;
+                            color: $white;
+                            font-family: $main_font_family;    
+                            font-weight: 800; 
+                            cursor: pointer; 
+                        }
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    max-width: 400px;
+                    width:100%;
+
+                    .slider-num {
+                        .nums {
+                            display: flex;
+                            flex-direction: row;
+
+                            .left-num {
+                                color: $white;
+                                font-family: $main_font_family;
+                                font-size: 48px;
+                                font-weight: 800;
+                            }
+                            
+                            .delimeter {
+                                color: $white;
+                                font-family: $main_font_family;
+                                font-size: 48px;
+                                font-weight: 800
+                            }
+
+                            .right-num {
+                                color: $gray;
+                                font-family: $main_font_family;
+                                font-size: 36px;
+                                padding-left: 2px;
+                                line-height: 55px;
+                                font-weight: 800
+                            }
+                        }
+                    }
+
+                    .slider-dots {
+                        .dot-container {
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            gap: 35px;
+
+                            .dot {
+                                width: 17px;
+                                height: 17px;
+                                background-color: $white;
+                                border-radius: 50%;
+                                cursor: pointer;
+
+                                &.active {
+                                    background-color: $red;
+                                    position: relative;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    &::before {
+                                        content: '';
+                                        width: 34px;
+                                        height: 34px;
+                                        position: absolute;
+                                        background-color: $red;
+                                        opacity: 0.5;
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bottom-block  {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-color: $gray_bg;
+                
+                &-inner  {
+                    padding: 40px;
+
+                    .slider-text {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        gap: 150px;
+
+                        .text-item {
+                            cursor: pointer;
+                            color: $white;
+                            transition: color 0.2s ease;
+                            font-family: $main_font_family;
+                            font-size: $main_font_size;
+                            font-weight: 800;
+                            max-width: 210px;
+                            width: 100%;
+
+                            &.active {
+                                color: $red;
+                            }
+                        }
                     }
                 }
             }

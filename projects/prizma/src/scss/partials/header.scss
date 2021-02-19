@@ -25,7 +25,7 @@ header.header {
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-start;
-                    gap: 10px;
+                    gap: 72px;
 
                     .menu-item {
                         &-link {
@@ -33,6 +33,12 @@ header.header {
                             font-size: $main_font_size;
                             font-weight: bold;
                             color: $white;
+                            text-decoration: none;
+                            transition: color 0.3s ease;
+                            
+                            &:hover {
+                                color: #6A0C0C;
+                            }
                         }
                     }
                 }
