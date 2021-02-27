@@ -96,6 +96,7 @@ module.exports = (env, argv) => {
 			...PAGES.map(page => new HtmlWebpackPlugin({
 				template: `${PAGES_DIR}/${page}`,
 				filename: path.resolve(__dirname, 'projects', project, 'dist', `${page.replace(/\.pug/, '.html')}`),
+				inject: false,
 			}))
 		]
 	}

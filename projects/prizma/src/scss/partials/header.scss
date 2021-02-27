@@ -37,7 +37,7 @@ header.header {
                             transition: color 0.3s ease;
                             
                             &:hover {
-                                color: #6A0C0C;
+                                color: $red;
                             }
                         }
                     }

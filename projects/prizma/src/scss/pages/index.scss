@@ -7,12 +7,22 @@ main.main-block {
             position: relative;
             height: 100%;
             background-color: #fff;
-            background-image: url("../images/top-section-bg.png");
             display: flex;
             flex-direction: column;
             justify-content: center;
             position: relative;
             z-index: 100;
+
+            .image {
+                opacity: 0;
+                transition: opacity 0.5s ease;
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+            }
 
             .bg-layer {
                 position: absolute;
@@ -117,6 +127,12 @@ main.main-block {
                                 background-color: $white;
                                 border-radius: 50%;
                                 cursor: pointer;
+                                transition: all 0.4s ease;
+
+                                &::before {
+                                    content: '';
+                                    transition: all 0.2s ease;
+                                }
 
                                 &.active {
                                     background-color: $red;
@@ -160,7 +176,7 @@ main.main-block {
                         .text-item {
                             cursor: pointer;
                             color: $white;
-                            transition: color 0.2s ease;
+                            transition: color 0.4s ease;
                             font-family: $main_font_family;
                             font-size: $main_font_size;
                             font-weight: 800;
